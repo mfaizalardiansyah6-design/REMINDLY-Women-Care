@@ -1,0 +1,25 @@
+﻿
+ INFO Seeding database. 
+
+
+   BadMethodCallException 
+
+  Call to undefined method App\Models\Reminder::factory()
+
+  at vendor\laravel\framework\src\Illuminate\Support\Traits\ForwardsCalls.php:67
+     63Γûò      * @throws \BadMethodCallException
+     64Γûò      */
+     65Γûò     protected static function throwBadMethodCallException($method)
+     66Γûò     {
+  Γ₧£  67Γûò         throw new BadMethodCallException(sprintf(
+     68Γûò             'Call to undefined method %s::%s()', static::class, $method
+     69Γûò         ));
+     70Γûò     }
+     71Γûò }
+
+  1   vendor\laravel\framework\src\Illuminate\Support\Traits\ForwardsCalls.php:36
+      Illuminate\Database\Eloquent\Model::throwBadMethodCallException("factory")
+
+  2   vendor\laravel\framework\src\Illuminate\Database\Eloquent\Model.php:2871
+      Illuminate\Database\Eloquent\Model::forwardCallTo(Object(Illuminate\Database\Eloquent\Builder), "factory", [])
+
